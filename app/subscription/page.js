@@ -2,20 +2,41 @@
 
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { fetchSubscriptions } from "../store/dataSlice";
 
 
 export const Subscriptions = () => {
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchSubscriptions)
-  }, [])
+    dispatch(fetchSubscriptions())
+  }, []);
 
   const subscriptions = useSelector(state => state.data.subscriptions);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
   const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+  const totalPages = Math.ceil(subscriptions.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const displayedSubscriptions = subscriptions.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  )
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
 
 
@@ -58,7 +79,7 @@ export const Subscriptions = () => {
         </tr>
       </thead>
       <tbody>
-        {subscriptions.map((subscription) => ( 
+        {displayedSubscriptions.map((subscription) => ( 
 
           <tr key={subscription.id}>
           <td className="border px-4 py-2">{subscription.id}</td>
@@ -77,6 +98,22 @@ export const Subscriptions = () => {
         ))}
       </tbody>
     </table>
+    <div className="flex justify-center mt-4 space-x-2">
+        <button
+          onClick={goToPreviousPage}
+          disabled={currentPage === 1}
+          className="border-transparent p-2 rounded-md bg-gray-300"
+        >
+          Previous
+        </button>
+        <button
+          onClick={goToNextPage}
+          disabled={currentPage === totalPages}
+          className="border-transparent p-2 rounded-md bg-gray-300"
+        >
+          Next
+        </button>
+      </div>
         </div>
     </main>
   )

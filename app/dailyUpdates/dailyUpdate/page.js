@@ -62,7 +62,7 @@ export default function dailyUpdate({searchParams}) {
 
     else if (filterSalads.length === 0) {
         return <div className="flex flex-row justify-center p-24 text-xl">
-            No user has subscribed to a salad yet!
+            No user has subscribed to a salad for the selected day yet!
         </div>
     }
 

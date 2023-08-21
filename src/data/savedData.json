@@ -336,94 +336,64 @@
 			"ingredients": [
 				{
 					"id": 1,
+					"numOfServings": 1
+				}
+			],
+			"cost": 0.3,
+			"targetStock": 20,
+			"currentStock": 0,
+			"price": 0.33
+		},
+		{
+			"id": 2,
+			"name": "Funky",
+			"size": "medium",
+			"ingredients": [
+				{
+					"id": 2,
 					"numOfServings": 3
 				},
 				{
 					"id": 6,
-					"numOfServings": 5
+					"numOfServings": 1
 				},
 				{
-					"id": 9,
-					"numOfServings": 11
-				}
-			],
-			"cost": 0.3,
-			"targetStock": 20,
-			"currentStock": 0,
-			"price": 0.33,
-			"subscriper": 133
-		},
-		{
-			"name": "Example Salad 2",
-			"id": 2,
-			"size": "small",
-			"ingredients": [
-				{
-					"id": 5,
+					"id": 2,
 					"numOfServings": 3
-				},
-				{
-					"id": 22,
-					"numOfServings": 5
-				},
-				{
-					"id": 32,
-					"numOfServings": 11
 				}
 			],
-			"cost": 0.3,
-			"targetStock": 20,
-			"currentStock": 0,
-			"price": 0.33,
-			"subscriper": 69
+			"price": "2.65",
+			"subscriper": 1
 		},
 		{
-			"name": "Example Salad 3",
 			"id": 3,
-			"size": "small",
-			"ingredients": [
-				{
-					"id": 33,
-					"numOfServings": 3
-				},
-				{
-					"id": 8,
-					"numOfServings": 5
-				},
-				{
-					"id": 7,
-					"numOfServings": 11
-				}
-			],
-			"cost": 0.3,
-			"targetStock": 20,
-			"currentStock": 0,
-			"price": 0.33,
-			"subscriper": 78
-		},
-		{
-			"name": "Example Salad 4",
-			"id": 4,
-			"size": "small",
+			"name": "Big Salad",
+			"size": "large",
 			"ingredients": [
 				{
 					"id": 1,
 					"numOfServings": 3
 				},
 				{
-					"id": 6,
-					"numOfServings": 5
-				},
-				{
-					"id": 9,
-					"numOfServings": 11
+					"id": 30,
+					"numOfServings": 2
 				}
 			],
-			"cost": 0.3,
-			"targetStock": 20,
-			"currentStock": 0,
-			"price": 0.33,
-			"subscriper": 3
+			"price": "2.20",
+			"subscriper": 17
+		},
+		{
+			"id": 4,
+			"name": "Small Salad",
+			"size": "small",
+			"ingredients": [
+				{
+					"id": 5,
+					"numOfServings": 2
+				}
+			],
+			"price": "0.50",
+			"subscriper": 2
 		}
 	],
 	"subscriptions": [
@@ -2053,6 +2023,83 @@
 				4
 			],
 			"timePreference": "morning"
+		},
+		{
+			"id": 137,
+			"name": "Dave",
+			"type": "medium",
+			"weekdays": [
+				5
+			],
+			"timePreference": "evening"
+		},
+		{
+			"id": 138,
+			"name": "Maggie",
+			"type": "medium",
+			"weekdays": [
+				3
+			],
+			"timePreference": "afternoon"
+		},
+		{
+			"id": 139,
+			"name": "Ryan",
+			"type": "medium",
+			"weekdays": [
+				1,
+				2,
+				3
+			],
+			"timePreference": "afternoon"
+		},
+		{
+			"id": 140,
+			"name": "Michael",
+			"type": "medium",
+			"weekdays": [
+				1
+			],
+			"timePreference": "afternoon"
+		},
+		{
+			"id": 141,
+			"name": "Becky",
+			"type": "small",
+			"weekdays": [
+				4,
+				2
+			],
+			"timePreference": "morning"
+		},
+		{
+			"id": 142,
+			"name": "Daryl",
+			"type": "medium",
+			"weekdays": [
+				1,
+				3
+			],
+			"timePreference": "afternoon"
+		},
+		{
+			"id": 143,
+			"name": "Maryl",
+			"type": "medium",
+			"weekdays": [
+				3,
+				4
+			],
+			"timePreference": "afternoon"
+		},
+		{
+			"id": 144,
+			"name": "Baggie",
+			"type": "large",
+			"weekdays": [
+				2
+			],
+			"timePreference": "afternoon"
 		}
 	],
 	"default": {
@@ -2393,94 +2440,13 @@
 				"ingredients": [
 					{
 						"id": 1,
-						"numOfServings": 3
-					},
-					{
-						"id": 6,
-						"numOfServings": 5
-					},
-					{
-						"id": 9,
-						"numOfServings": 11
+						"numOfServings": 1
 					}
 				],
 				"cost": 0.3,
 				"targetStock": 20,
 				"currentStock": 0,
-				"price": 0.33,
-				"subscriper": 133
-			},
-			{
-				"name": "Example Salad 2",
-				"id": 2,
-				"size": "small",
-				"ingredients": [
-					{
-						"id": 5,
-						"numOfServings": 3
-					},
-					{
-						"id": 22,
-						"numOfServings": 5
-					},
-					{
-						"id": 32,
-						"numOfServings": 11
-					}
-				],
-				"cost": 0.3,
-				"targetStock": 20,
-				"currentStock": 0,
-				"price": 0.33,
-				"subscriper": 69
-			},
-			{
-				"name": "Example Salad 3",
-				"id": 3,
-				"size": "small",
-				"ingredients": [
-					{
-						"id": 33,
-						"numOfServings": 3
-					},
-					{
-						"id": 8,
-						"numOfServings": 5
-					},
-					{
-						"id": 7,
-						"numOfServings": 11
-					}
-				],
-				"cost": 0.3,
-				"targetStock": 20,
-				"currentStock": 0,
-				"price": 0.33,
-				"subscriper": 78
-			},
-			{
-				"name": "Example Salad 4",
-				"id": 4,
-				"size": "small",
-				"ingredients": [
-					{
-						"id": 1,
-						"numOfServings": 3
-					},
-					{
-						"id": 6,
-						"numOfServings": 5
-					},
-					{
-						"id": 9,
-						"numOfServings": 11
-					}
-				],
-				"cost": 0.3,
-				"targetStock": 20,
-				"currentStock": 0,
-				"price": 0.33,
-				"subscriper": 3
+				"price": 0.33
 			}
 		],
 		"subscriptions": [

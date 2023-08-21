@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Link from 'next/link';
-
+import { fetchSalads } from '../store/dataSlice';
 
 export default function salads()  {
 
@@ -13,6 +13,11 @@ export default function salads()  {
   const subscriptions = useSelector(state => state.data.subscriptions)
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSalads())
+  }, []);
 
   const handlePopupOpen = (content) => {
     setPopupContent(content);

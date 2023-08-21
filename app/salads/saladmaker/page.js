@@ -24,9 +24,11 @@ export default function saladmaker() {
         name: saladName,
         size: selectedSize,
         ingredients: ingredient,
-        cost: cost, 
+        price: cost,
         subscriper: subscriper
   })
+
+
 
   useEffect(() => {
       let totalCost = 0;
@@ -91,7 +93,7 @@ export default function saladmaker() {
       name: saladName,
       size: selectedSize,
       ingredients: ingredients,
-      cost: cost, 
+      price: cost,
       subscriper: subscriper
 })
   setShowPopup(true)

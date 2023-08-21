@@ -42,8 +42,6 @@ export default function subscripe() {
   const submitClick = async () => {
     // Handle the user's confirmation
     setShowPopup(false);
-    console.log(userDetail)
-
     try {
       await fetch('/api/subscriptions', {
         method: 'POST',
